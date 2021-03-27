@@ -5,14 +5,14 @@ const faker = require('faker')
 const writeStream = createWriteStream(`${__dirname}/public/test.csv`)
 
 // https://stackoverflow.com/questions/46671199/how-to-add-1-utc-day-to-javascript-date
-const ONE_DAY_TIMESTAMP = 1440 * 60 * 1000
+const MS_IN_MINUTE = 60 * 1000
 const NUMBER_OF_ROWS = 1000000
 
 function* makeDate(start=1, end=NUMBER_OF_ROWS, step=1) {
     let iterationCount = 0
     for (let i = start; i < end; i+= step) {
         iterationCount++
-        yield new Date(i * ONE_DAY_TIMESTAMP)
+        yield new Date(i * MS_IN_MINUTE)
     }
     return iterationCount
 }
