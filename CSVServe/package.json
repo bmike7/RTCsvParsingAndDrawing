@@ -1,0 +1,11 @@
+{
+  "name": "CSVServe",
+  "version": "1.0.0",
+  "description": "JS script to create big csv file with faker + serving this file",
+  "main": "index.js",
+  "author": "Mike Bijl",
+  "license": "MIT",
+  "dependencies": {
+    "objects-to-csv": "^1.3.6"
+  }
+}
